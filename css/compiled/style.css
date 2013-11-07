@@ -1,0 +1,363 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html {
+  background-color: #000; }
+
+body {
+  line-height: 1;
+  font-family: Helvetica ,sans-serif;
+  color: #FFF;
+  overflow-y: hidden;
+  font-size: 62.5%;
+  /* 1em in 10px */ }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  text-shadow: 0px -1px 0px #000;
+  font-weight: bold; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+div.container {
+  height: 420px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+@font-face {
+  font-family: 'BodoniMTRegular';
+  src: url("font/bod_r.eot");
+  src: url("font/bod_r.eot") format("embedded-opentype"), url("font/bod_r.woff") format("woff"), url("font/bod_r.ttf") format("truetype"), url("font/bod_r.svg#BodoniMTRegular") format("svg"); }
+
+div.page {
+  float: left;
+  width: 100%;
+  background-color: #000;
+  height: 480px;
+  overflow: hidden;
+  position: absolute; }
+
+section {
+  font-size: 1.4em;
+  /* 14px / 10px (1em) */
+  width: 262px;
+  margin: 0 auto; }
+
+header {
+  width: 100%;
+  float: left;
+  clear: both;
+  text-align: center;
+  padding: 20px 0; }
+  header img {
+    max-width: 100%;
+    height: auto; }
+
+div.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+  clear: both;
+  color: #FFF; }
+
+a.big-button {
+  display: block;
+  color: #FFF;
+  background: url(../../img/big-button.svg) bottom;
+  width: 260px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 1.71428571429em;
+  /* 24px / 14px (1em) */ }
+  a.big-button:hover {
+    background-position: top; }
+
+a.small-button {
+  display: block;
+  color: #FFF;
+  background: url(../../img/small-button.svg) bottom;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 1.71428571429em;
+  /* 24px / 14px (1em) */ }
+  a.small-button:hover {
+    background-position: top; }
+
+div.image {
+  width: 100%;
+  height: 185px;
+  float: left;
+  text-align: center; }
+  div.image img {
+    border: 2px solid #FFF; }
+
+a.big-button.disable {
+  background: url(../../img/big-button-faded.svg) bottom;
+  color: #959595;
+  cursor: default;
+  pointer-events: none; }
+
+a.small-button.disable {
+  background: url(../../img/small-button-faded.svg) bottom;
+  color: #959595;
+  cursor: default;
+  pointer-events: none; }
+
+div.game-image {
+  width: 260px;
+  height: 260px;
+  background: url(../../img/game-image.png) center left no-repeat;
+  margin-bottom: 10px;
+  background-size: cover; }
+
+section.skill-level-page div.content.skill-level {
+  margin-top: 50%; }
+section.skill-level-page a.big-button.skill-level {
+  margin-bottom: 30px; }
+
+section.levels-page div.content.levels {
+  margin-top: 50px; }
+section.levels-page a.small-button.levels {
+  float: left;
+  margin: 0 30px 30px 0; }
+section.levels-page a.small-button.levels:nth-child(4n+4) {
+  margin-right: 0px; }
+
+section.question-page div.title {
+  margin: 15px 0;
+  text-align: center; }
+section.question-page div.image.question {
+  margin-bottom: 20px; }
+section.question-page a.option {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #414042;
+  margin-bottom: 10px;
+  color: #FFF;
+  text-shadow: 0px -1px 0px #000;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both; }
+  section.question-page a.option:hover {
+    background-color: #FFF;
+    color: #000;
+    text-shadow: 0px 1px 0px #FFF; }
+section.question-page a.option.selected {
+  background-color: #FFF;
+  color: #000;
+  text-shadow: 0px -1px 0px #FFF; }
+section.question-page div.navigation-container {
+  width: 260px;
+  margin-top: 20px;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto; }
+section.question-page a.back {
+  display: block;
+  float: left;
+  width: 92px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: url(../../img/back-button.svg) bottom; }
+  section.question-page a.back:hover {
+    background-position: top; }
+section.question-page a.next {
+  display: block;
+  float: left;
+  width: 92px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: url(../../img/next-button.svg) bottom; }
+  section.question-page a.next:hover {
+    background-position: top; }
+section.question-page a.back.disable {
+  display: block;
+  float: left;
+  width: 92px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: url(../../img/back-button-faded.svg) bottom;
+  color: #959595;
+  cursor: default;
+  pointer-events: none; }
+  section.question-page a.back.disable:hover {
+    background-position: top; }
+section.question-page a.next.disable {
+  display: block;
+  float: left;
+  width: 92px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: url(../../img/next-button-faded.svg) bottom;
+  color: #959595;
+  cursor: default;
+  pointer-events: none; }
+  section.question-page a.next.disable:hover {
+    background-position: top; }
+section.question-page div.pagination {
+  float: left;
+  width: 76px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px; }
+
+section.score-page {
+  padding-top: 20px; }
+  section.score-page div.score-button-wrapper {
+    width: 260px;
+    text-align: center;
+    margin: 0 auto; }
+    section.score-page div.score-button-wrapper a.click-answers {
+      margin: 0 auto 20px auto;
+      display: inline-block;
+      font-weight: normal; }
+  section.score-page a.big-button.score-page {
+    margin-bottom: 15px; }
+  section.score-page span {
+    color: #eb008b; }
+  section.score-page .score {
+    text-align: center; }
+    section.score-page .score p {
+      margin-bottom: 23px; }
+    section.score-page .score span {
+      font-size: 5.71428571429em;
+      font-family: 'BodoniMTRegular';
+      line-height: 0.75em; }
+  section.score-page .ranking {
+    text-align: center;
+    margin: 20px 0; }
+    section.score-page .ranking p {
+      margin-bottom: 10px; }
+    section.score-page .ranking span {
+      font-size: 1.28571428571em;
+      font-family: 'BodoniMTRegular'; }
+
+section.map iframe {
+  margin-bottom: 5px;
+  width: 100%; }
+section.map div.image.map {
+  height: 203px;
+  margin-bottom: 20px; }
+section.map a {
+  display: block;
+  float: left;
+  color: #eb008b;
+  margin-bottom: 18px; }
+section.map ul {
+  font-size: 0.85714285714em;
+  float: left; }
+  section.map ul li {
+    margin-bottom: 3px; }
+    section.map ul li span.telephone {
+      float: left;
+      margin-right: 5px; }
+
+section.buying-selling span {
+  color: #eb008b; }
+section.buying-selling p {
+  font-size: 0.85714285714em;
+  line-height: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+footer {
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #000; }
+
+div.footer-container {
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto; }
+
+a.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  float: left;
+  margin-top: 10px;
+  background-position: bottom; }
+  a.icon:hover {
+    background-position: top; }
+
+.home {
+  background: url(../../img/home-icon.svg);
+  margin-right: 33px; }
+
+.share {
+  background: url(../../img/share-icon.svg);
+  margin-right: 35px; }
+
+.location {
+  background: url(../../img/location-icon.svg);
+  margin-right: 32px; }
+
+.info {
+  background: url(../../img/info-icon.svg); }
+
+ol li a {
+  color: #000;
+  text-shadow: 0px 0px 0px;
+  font-size: 1.8em;
+  margin-bottom: 5px; }
+
+/*# sourceMappingURL=style.css.map */

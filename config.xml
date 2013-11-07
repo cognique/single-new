@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.cognique.testpandora"
+        versionCode="10"
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Test Pandora App</name>
+
+    <description>
+        test-A Designer Label Game
+    </description>
+
+    <author href="https://cognique.co.uk" email="apps@cognique.co.uk">
+        test-Cognique
+    </author>
+
+    <preference name="orientation" value="portrait" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+
+    <gap:plugin name="com.phonegap.plugins.childbrowser" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+
+</widget>

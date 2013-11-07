@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script>
+        // screenWidth = screen.width;
+        // viewport = document.querySelector("meta[name=viewport]");
+        // viewport.setAttribute('content','width=' + screenWidth + ',initial-scale=1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/compiled/style.css">
+</head>
+<body onload="renderHTML.renderHomePage()">
+<div class="page">
+    <div class="container">
+
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <a href="#" onclick="renderHTML.renderHomePage()" class="icon home"></a>
+            <a href="#" onclick="renderHTML.renderScoreSharePage()"  class="icon share"></a>
+            <a href="#" onclick="renderHTML.renderMapPage()" class="icon location"></a>
+            <a href="#" onclick="renderHTML.renderBuyingSellingPage()" class="icon info"></a>
+        </div>
+    </footer>
+</div>
+
+    <script src="phonegap.js"></script>
+    <script src="js/plugins/SocialSharing.js"></script>
+    <script src="childbrowser.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="js/content.js"></script>
+</body>
+</html>

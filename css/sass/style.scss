@@ -1,0 +1,452 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html {
+    background-color: #000;
+}
+body {
+    line-height: 1;
+    font-family: Helvetica ,sans-serif;
+    color: #FFF;
+    overflow-y: hidden;
+    font-size: 62.5%; /* 1em in 10px */
+    // target / context = result
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: 0px -1px 0px #000;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+div.container {
+    height: 420px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+// ================================Variables================================
+
+$pink: #eb008b;
+
+// ================================Main Containers================================
+
+// ========================================================Bodoni========================================================
+
+@font-face {
+    font-family: 'BodoniMTRegular';
+    src: url('font/bod_r.eot');
+    src: url('font/bod_r.eot') format('embedded-opentype'),
+         url('font/bod_r.woff') format('woff'),
+         url('font/bod_r.ttf') format('truetype'),
+         url('font/bod_r.svg#BodoniMTRegular') format('svg');
+}
+
+div.page {
+    float: left;
+    width: 100%;
+    background-color: #000;
+    height: 480px;
+    overflow: hidden;
+    position: absolute;
+    // top: 50%;
+    // margin-top: -240px;
+}
+
+section {
+    font-size: 1.4em; /* 14px / 10px (1em) */
+    width: 262px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    float: left;
+    clear: both;
+    text-align: center;
+    padding: 20px 0;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+div.content {
+    // width: 100%;
+    // float: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+    clear: both;
+    color: #FFF;
+    // overflow-x: auto;
+}
+
+a.big-button {
+    display: block;
+    color: #FFF;
+    background: url(../../img/big-button.svg) bottom;
+    width: 260px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 1.71428571429em; /* 24px / 14px (1em) */
+    &:hover {
+        background-position: top;
+    }
+}
+a.small-button {
+    display: block;
+    color: #FFF;
+    background: url(../../img/small-button.svg) bottom;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 1.71428571429em; /* 24px / 14px (1em) */
+    &:hover {
+        background-position: top;
+    }
+}
+div.image {
+    // width: 260px;
+    width: 100%;
+    height: 185px;
+    float: left;
+    text-align: center;
+    img {
+       border: 2px solid #FFF;
+    }
+}
+a.big-button.disable {
+    background: url(../../img/big-button-faded.svg) bottom;
+    color: #959595;
+    cursor: default;
+    pointer-events: none;
+}
+a.small-button.disable {
+    background: url(../../img/small-button-faded.svg) bottom;
+    color: #959595;
+    cursor: default;
+    pointer-events: none;
+}
+
+// ================================Home Page================================
+
+div.game-image {
+    width: 260px;
+    height: 260px;
+    background: url(../../img/game-image.png) center left no-repeat;
+    margin-bottom: 10px;
+    background-size: cover;
+}
+
+// =========================Skill Level Page=========================
+
+section.skill-level-page {
+    div.content.skill-level {
+        margin-top: 50%;
+    }
+
+    a.big-button.skill-level {
+        margin-bottom: 30px;
+    }
+}
+
+
+// =========================Levels Page=========================
+
+section.levels-page {
+    div.content.levels {
+        margin-top: 50px;
+    }
+
+    a.small-button.levels {
+        float: left;
+        margin: 0 30px 30px 0;
+    }
+    a.small-button.levels:nth-child(4n+4) {
+        margin-right: 0px;
+    }
+}
+// =========================Question Page=========================
+
+section.question-page {
+    div.title {
+        margin: 15px 0;
+        text-align: center;
+    }
+    div.image.question {
+        margin-bottom: 20px;
+    }
+
+    a.option {
+        display: block;
+        // float: left;
+        // width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #414042;
+        margin-bottom: 10px;
+        color: #FFF;
+        text-shadow: 0px -1px 0px #000;
+        width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+        clear: both;
+            &:hover {
+            background-color: #FFF;
+            color: #000;
+            text-shadow: 0px 1px 0px #FFF;
+        }
+    }
+    a.option.selected {
+        background-color: #FFF;
+        color: #000;
+        text-shadow: 0px -1px 0px #FFF;
+    }
+    div.navigation-container {
+        width: 260px;
+        margin-top: 20px;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @mixin back-next {
+        display: block;
+        float: left;
+        width: 92px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        &:hover {
+            background-position: top;
+        }
+    }
+    a.back {
+        @include back-next;
+        background: url(../../img/back-button.svg) bottom;
+    }
+    a.next {
+        @include back-next;
+        background: url(../../img/next-button.svg) bottom;
+    }
+    a.back.disable {
+        @include back-next;
+        background: url(../../img/back-button-faded.svg) bottom;
+        color: #959595;
+        cursor: default;
+        pointer-events: none;
+    }
+    a.next.disable {
+        @include back-next;
+        background: url(../../img/next-button-faded.svg) bottom;
+        color: #959595;
+        cursor: default;
+        pointer-events: none;
+    }
+    div.pagination {
+        float: left;
+        width: 76px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+
+// =========================Score Page=========================
+
+section.score-page {
+    padding-top: 20px;
+    div.score-button-wrapper {
+        width: 260px;
+        text-align: center;
+        margin: 0 auto;
+        a.click-answers {
+            margin: 0 auto 20px auto;
+            display: inline-block;
+            font-weight: normal;
+        }
+    }
+    a.big-button.score-page {
+        margin-bottom: 15px;
+    }
+    span {
+        color: $pink;
+    }
+    .score {
+        text-align: center;
+        p {
+            margin-bottom: 23px;
+        }
+        span {
+            font-size: 5.71428571429em;
+            font-family: 'BodoniMTRegular';
+            line-height: 0.75em;
+        }
+    }
+    .ranking {
+        text-align: center;
+        margin: 20px 0;
+        p {
+            margin-bottom: 10px;
+        }
+        span {
+            font-size: 1.28571428571em;
+            font-family: 'BodoniMTRegular';
+        }
+    }
+}
+
+
+// =========================Map Page=========================
+
+section.map {
+    iframe {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    div.image.map {
+        height: 203px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        display: block;
+        float: left;
+        color: $pink;
+        margin-bottom: 18px;
+    }
+
+    ul {
+        font-size: 0.85714285714em;
+        float: left;
+        li {
+            margin-bottom: 3px;
+            span.telephone {
+                float: left;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+// =========================Buying Selling Page=========================
+
+section.buying-selling {
+    span { color: $pink; }
+    p {
+        font-size: 0.85714285714em;
+        line-height: 18px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+
+// =========================Footer=========================
+
+
+footer {
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #000;
+}
+div.footer-container {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    float: left;
+    margin-top: 10px;
+    background-position: bottom;
+    &:hover {
+        background-position: top;
+    }
+}
+.home {
+    background: url(../../img/home-icon.svg);
+    margin-right: 33px;
+}
+.share {
+    background: url(../../img/share-icon.svg);
+    margin-right: 35px;
+}
+.location {
+    background: url(../../img/location-icon.svg);
+    margin-right: 32px;
+}
+.info {
+    background: url(../../img/info-icon.svg);
+}
+
+
+
+
+
+
+
+
+
+
+ol {
+    li a {
+        color: #000;
+        text-shadow: 0px 0px 0px;
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+}
