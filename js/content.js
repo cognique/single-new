@@ -369,13 +369,17 @@ var renderHTML = {
             '<section class="skill-level-page">' +
             '<div class="content skill-level">' +
             '<a href="#" onclick="renderHTML.renderLevelsPage(100)" class="big-button skill-level beginner">BEGINNER</a>' +
-            '<button onclick="window.plugins.socialsharing.share(\'Ive been playing the Designer Label Game\')">message only</button>'+
+            '<button onclick="renderHTML.socialSharingPlugin()">socialSharingPlugin</button>'+
             '<a href="#" onclick="renderHTML.renderLevelsPage(200)" class="big-button skill-level intermediate">INTERMEDIATE</a>' +
             '<a href="#" onclick="renderHTML.renderLevelsPage(300)" class="big-button skill-level expert">EXPERT</a>' +
             '</div>' +
             '</section>';
         $('.container').html(html);
         showHideSkillLevels.skillLevelEnabled();
+    },
+
+    socialSharingPlugin : function() {
+      window.plugins.socialsharing.share('Ive been playing the Designer Label Game');
     },
 
     renderLevelsPage : function(skillLevel) {

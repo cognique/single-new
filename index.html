@@ -21,7 +21,7 @@
     <footer>
         <div class="footer-container">
             <a href="#" onclick="renderHTML.renderHomePage()" class="icon home"></a>
-            <a href="#" class="icon share"></a>
+            <a href="#" onclick="renderHTML.socialSharingPlugin()" class="icon share"></a>
             <a href="#" onclick="renderHTML.renderMapPage()" class="icon location"></a>
             <a href="#" onclick="renderHTML.renderBuyingSellingPage()" class="icon info"></a>
         </div>
@@ -34,6 +34,6 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script type="text/javascript" src="js/content.js"></script>
-    <button style="position: absolute; left: 50%; top: 40px;" onclick="window.plugins.socialsharing.share(\'Ive been playing the Designer Label Game\')">message only</button>
+    <button style="position: absolute; left: 50%; top: 40px;" onclick="renderHTML.socialSharingPlugin()">socialSharingPlugin</button>
 </body>
 </html>
