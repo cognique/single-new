@@ -863,14 +863,14 @@ var renderHTML = {
 
         var string = "123123123123123";
         var link = "http%3A%2F%2Fwww.google.com";
-        var picture = "https://www.google.nl/images/srpr/logo4w.png";
+        var picture = "https%3A%2F%2Fwww.google.nl%2Fimages%2Fsrpr%2Flogo4w.png";
 
         var html =
             '<section class="skill-level-page">' +
             '<div class="content skill-level">' +
             '<a href="#" onclick="renderHTML.childBrowserFunctionFACE()" class="big-button skill-level">FACEBOOK</a>' +
             '<a href="#" onclick="renderHTML.childBrowserFunctionTWIT()" class="big-button skill-level">TWITTER</a>' +
-            '<button onclick="window.plugins.socialsharing.share('+string+', null, null, '+string+')">message and link</button>' +
+            '<button onclick="window.plugins.socialsharing.share(null, null, '+picture+')">picture</button>' +
             // '<a href="' + facebook_url + '" class="big-button skill-level" target="_blank">FACEBOOK</a>' +
             // '<a href="' + twitter_url + '" class="big-button skill-level" target="_blank">TWITTER</a>' +
             "</div>" +
