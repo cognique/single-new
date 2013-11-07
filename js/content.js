@@ -369,7 +369,6 @@ var renderHTML = {
             '<section class="skill-level-page">' +
             '<div class="content skill-level">' +
             '<a href="#" onclick="renderHTML.renderLevelsPage(100)" class="big-button skill-level beginner">BEGINNER</a>' +
-            '<button onclick="renderHTML.socialSharingPlugin()">socialSharingPlugin</button>'+
             '<a href="#" onclick="renderHTML.renderLevelsPage(200)" class="big-button skill-level intermediate">INTERMEDIATE</a>' +
             '<a href="#" onclick="renderHTML.renderLevelsPage(300)" class="big-button skill-level expert">EXPERT</a>' +
             '</div>' +
@@ -379,7 +378,7 @@ var renderHTML = {
     },
 
     socialSharingPlugin : function() {
-      window.plugins.socialsharing.share('Ive been playing the Designer Label Game');
+      window.plugins.socialsharing.share('I have been playing the Designer Label Game');
     },
 
     renderLevelsPage : function(skillLevel) {
