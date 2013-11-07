@@ -871,6 +871,7 @@ var renderHTML = {
             '<a href="#" onclick="renderHTML.childBrowserFunctionFACE()" class="big-button skill-level">FACEBOOK</a>' +
             '<a href="#" onclick="renderHTML.childBrowserFunctionTWIT()" class="big-button skill-level">TWITTER</a>' +
             '<button onclick="window.plugins.socialsharing.share('+string+')">picture</button>' +
+            '<button onclick="window.plugins.socialsharing.share(\'Message only\')">message only</button>' +
             // '<a href="' + facebook_url + '" class="big-button skill-level" target="_blank">FACEBOOK</a>' +
             // '<a href="' + twitter_url + '" class="big-button skill-level" target="_blank">TWITTER</a>' +
             "</div>" +
