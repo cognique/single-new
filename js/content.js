@@ -862,8 +862,8 @@ var renderHTML = {
         // var twitter_url = "https://twitter.com/intent/tweet?text=I%27ve%20been%20playing%20the%20Pandora%20App%20Game";
 
         var string = "123123123123123",
-            link = "http%3A%2F%2Fwww.google.com",
-            picture = "https://www.google.nl/images/srpr/logo4w.png";
+        var link = "http%3A%2F%2Fwww.google.com";
+        var picture = "https://www.google.nl/images/srpr/logo4w.png";
 
         var html =
             '<section class="skill-level-page">' +
